@@ -1,0 +1,282 @@
+@font-face {
+    font-family: Kairos;
+    font-weight: 400;
+    src: url(/static/media/Kairos-Regular.79650e7c3295f1af42e6.otf) format("opentype")
+}
+
+@font-face {
+    font-family: Kairos;
+    font-weight: 900;
+    src: url(/static/media/Kairos-Black.c15b3823236b61f3173d.otf) format("opentype")
+}
+
+@font-face {
+    font-family: Kairos;
+    font-weight: 700;
+    src: url(/static/media/Kairos-Bold.40dc2f471a8799aba131.otf) format("opentype")
+}
+
+@font-face {
+    font-family: Kairos;
+    font-weight: 200;
+    src: url(/static/media/Kairos-Light.6485ad65a8c01f2429c9.otf) format("opentype")
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes blink {
+    0%,
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        opacity: 0
+    }
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        opacity: .3
+    }
+}
+
+@keyframes blink {
+    0%,
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        opacity: 0
+    }
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        opacity: .3
+    }
+}
+
+.fadeIn-appear,
+.fadeIn-enter {
+    opacity: 0
+}
+
+.fadeIn-appear-active,
+.fadeIn-enter-active {
+    opacity: 1;
+    transition: opacity .2s
+}
+
+.fadeIn-exit {
+    opacity: 1
+}
+
+.fadeIn-exit-active {
+    opacity: 0;
+    transition: opacity .2s
+}
+
+.open-appear .window-content,
+.open-enter .window-content {
+    max-height: 0
+}
+
+.open-appear-active .window-content,
+.open-enter-active .window-content {
+    max-height: 1000px;
+    transition: max-height .8s ease-out .4s
+}
+
+.open-exit {
+    opacity: 1
+}
+
+.open-exit .window-content {
+    max-height: 1000px
+}
+
+.open-exit-active {
+    opacity: 0;
+    transition: .2s ease-out .4s
+}
+
+.open-exit-active .window-content {
+    max-height: 0;
+    transition: max-height .4s ease-out
+}
+
+.menu-blink-appear-active li {
+    -webkit-animation: blink .4s linear 2s backwards;
+    animation: blink .4s linear 2s backwards
+}
+
+.menu-blink-appear-active li:nth-child(2) {
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s
+}
+
+.menu-blink-appear-active li:nth-child(3) {
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s
+}
+
+.menu-blink-appear-active li:nth-child(4) {
+    -webkit-animation-delay: 2.6s;
+    animation-delay: 2.6s
+}
+
+.menu-blink-appear-active li:nth-child(5) {
+    -webkit-animation-delay: 2.8s;
+    animation-delay: 2.8s
+}
+
+.menu-blink-enter-active li {
+    -webkit-animation: blink .4s linear backwards;
+    animation: blink .4s linear backwards
+}
+
+.menu-blink-enter-active li:nth-child(2) {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s
+}
+
+.menu-blink-enter-active li:nth-child(3) {
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s
+}
+
+.menu-blink-enter-active li:nth-child(4) {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s
+}
+
+.menu-blink-enter-active li:nth-child(5) {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s
+}
+
+.menu-blink-exit-active li {
+    animation: blink .4s linear reverse forwards
+}
+
+.menu-blink-exit-active li:nth-child(2) {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s
+}
+
+.menu-blink-exit-active li:nth-child(3) {
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s
+}
+
+.menu-blink-exit-active li:nth-child(4) {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s
+}
+
+.menu-blink-exit-active li:nth-child(5) {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin: 0
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace
+}
+
+* {
+    box-sizing: border-box;
+    outline: none
+}
+
+#root,
+body,
+html {
+    background-color: #000;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+body {
+    background: #f0f0f0;
+    font-family: Kairos
+}
+
+canvas {
+    height: 100vh;
+    width: 100vw
+}
+
+::selection {
+    background: #7f0000
+}
+
+::-webkit-scrollbar {
+    width: 3px
+}
+
+::-webkit-scrollbar-track {
+    background: #3d3d3d
+}
+
+::-webkit-scrollbar-thumb {
+    background: #818181
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555
+}
